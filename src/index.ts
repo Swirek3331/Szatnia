@@ -7,6 +7,7 @@ const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
+    database: "szatnia"
 })
 
 db.connect((err) => {
@@ -14,6 +15,16 @@ db.connect((err) => {
         throw err
     }
     console.log("Połączono z bazą danych!")
+})
+
+app.post("/dbcreate", (req, res) => {
+    db.query("CREATE DATABASE IF NOT EXISTS szatnia", (err, result) => {
+        if (err) {
+            throw err
+        }
+        console.log(result)
+        res.send("Baza danych stworzona!")
+    })
 })
 
 app.listen(3000, () => {
