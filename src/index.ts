@@ -20,16 +20,6 @@ db.connect((err) => {
     console.log("Połączono z bazą danych!")
 })
 
-app.get("/dbcreate", (req, res) => {
-    db.query("CREATE DATABASE IF NOT EXISTS szatnia", (err, result) => {
-        if (err) {
-            throw err
-        }
-        console.log(result)
-        res.send("Baza danych stworzona!")
-    })
-})
-
 app.get('/', function(req, res) {
     res.sendFile(path.join(rootDirectory + '/public/index.html'));
 });
@@ -38,5 +28,12 @@ app.listen(3000, () => {
     console.log("Śmiga na porcie 3000!")
 })
 
-
-
+function createDB(): void
+{
+    db.query("CREATE DATABASE IF NOT EXISTS szatnia", (err, result) => {
+        if (err) {
+            throw err
+        }
+        console.log("Baza danych stworzona!")
+    })
+}
