@@ -1,5 +1,8 @@
 import express from 'express';
 import mysql from 'mysql';
+import path from 'path';
+
+const rootDirectory = path.dirname(__dirname);
 
 const app = express()
 
@@ -27,6 +30,13 @@ app.get("/dbcreate", (req, res) => {
     })
 })
 
+app.get('/', function(req, res) {
+    res.sendFile(path.join(rootDirectory + '/public/index.html'));
+});
+
 app.listen(3000, () => {
     console.log("Śmiga na porcie 3000!")
 })
+
+
+
