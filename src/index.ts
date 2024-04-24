@@ -24,6 +24,8 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(rootDirectory + '/public/index.html'));
 });
 
+app.use(express.static(path.join(rootDirectory, 'public')));
+
 app.listen(3000, () => {
     console.log("Śmiga na porcie 3000!")
 })
