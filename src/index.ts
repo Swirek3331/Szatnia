@@ -17,7 +17,7 @@ db.connect((err) => {
     console.log("Połączono z bazą danych!")
 })
 
-app.post("/dbcreate", (req, res) => {
+app.get("/dbcreate", (req, res) => {
     db.query("CREATE DATABASE IF NOT EXISTS szatnia", (err, result) => {
         if (err) {
             throw err
