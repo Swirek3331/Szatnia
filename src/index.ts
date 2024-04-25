@@ -1,5 +1,5 @@
 import express from 'express';
-import mysql from 'mysql';
+import mysql from 'mysql2';
 import path from 'path';
 
 const rootDirectory = path.dirname(__dirname);
@@ -20,7 +20,7 @@ db.connect((err) => {
     console.log("Połączono z bazą danych!")
 })
 
-app.get('/', function(req, res) {
+app.get("/", (req, res) => {
     res.sendFile(path.join(rootDirectory + '/public/index.html'));
 });
 
