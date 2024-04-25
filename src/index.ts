@@ -1,3 +1,4 @@
+import { exec } from 'child_process';
 import express from 'express';
 import mysql from 'mysql2';
 import path from 'path';
@@ -25,9 +26,10 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.static(path.join(rootDirectory, 'public')));
+app.use(express.static(path.join(rootDirectory, "assets")));
 
 app.listen(3000, () => {
-    console.log("Śmiga na porcie 3000!")
+    console.log("http://127.0.0.1:3000/")
 })
 
 function createDB(): void
@@ -37,5 +39,32 @@ function createDB(): void
             throw err
         }
         console.log("Baza danych stworzona!")
+    })
+}
+
+function dumpDB()
+{
+    exec(`mysqldump -u root szatnia > ${rootDirectory}/dump.sql`, (err, stdout, stderr) => {
+        if (err)
+        {
+            console.error(`exec error: ${err}`)
+            console.error(`stderr: ${stderr}`)
+            return;
+        }
+        //console.log(`stdout: ${stdout}`)
+        //console.error(`stderr: ${stderr}`)
+    })
+}
+
+function importDB()
+{
+    exec(`mysql -u root szatnia < ${rootDirectory}/dump.sql`, (err, stdout, stderr) => {
+        if (err)
+        {
+            console.error(`exec error: ${err}`)
+            return
+        }
+        //console.log(`stdout: ${stdout}`)
+        //console.error(`stderr: ${stderr}`)
     })
 }
