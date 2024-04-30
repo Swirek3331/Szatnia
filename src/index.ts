@@ -22,11 +22,11 @@ db.connect((err) => {
 })
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(rootDirectory + '/public/index.html'));
-});
+    res.sendFile(path.join(rootDirectory + "/public/index.html"))
+})
 
-app.use(express.static(path.join(rootDirectory, 'public')));
-app.use(express.static(path.join(rootDirectory, "assets")));
+app.use(express.static(path.join(rootDirectory, "public")))
+app.use(express.static(path.join(rootDirectory, "assets")))
 
 app.listen(3000, () => {
     console.log("http://127.0.0.1:3000/")

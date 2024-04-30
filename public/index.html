@@ -9,6 +9,58 @@
     <link rel="stylesheet" href="./css/main.css" type="text/css"/>
 </head>
 <body>
-    
+    <main class="flex">
+        <section>
+            <h2>Pomieszczenia</h2>
+            <form>
+                <label for="roomID">Numer pomieszczenia</label>
+                <input type="number" id="roomID" name="roomID"/>
+            </form>
+        </section>
+        <section>
+            <h2>Bloczki</h2>
+            <form>
+                <label for="itemID">Numer bloczka</label>
+                <input type="number" id="blockID" name="blockID"/>
+                <br/>
+
+                <label for="state">Stan</label>
+                <select id="state" name="state">
+                    <option>Numerek jest</option>
+                    <option>Numerka brak</option>
+                    <option>Brak miejsca</option>
+                </select>
+                <br/>
+
+                <label for="material">Rodzaj bloczka</label>
+                <select id="material" name="material">
+                    <option>Typowy</option>
+                    <option>Stary</option>
+                    <option>Drewniany</option>
+                    <option>Drewniany?</option>
+                </select>
+                <br/>
+
+                <label for="comment">Uwagi</label>
+                <textarea id="comment" name="comment"></textarea>
+                <br/>
+            </form>
+        </section>
+        <section>
+            <h2>Przedziały</h2>
+            <form>
+                <label for="boxID">Numer przedziału</label>
+                <input type="number" id="boxID" name="boxID"/>
+                <br/>
+
+                <label for="roomID2">Numer pomieszczenia</label>
+                <input type="number" id="roomID2" name="roomID2"/>
+                <br/>
+
+                <label for="accesability">Dostępność</label>
+                <input type="checkbox" id="accesability" name="accesability"/>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
