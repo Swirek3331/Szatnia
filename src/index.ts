@@ -7,7 +7,7 @@ const rootDirectory = path.dirname(__dirname);
 
 const app = express()
 
-const db = mysql.createConnection({
+export const db = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "",
