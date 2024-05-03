@@ -1,5 +1,3 @@
-import mysql from "mysql2/promise";
-
 import { db } from "../index";
 
 export function getRooms()

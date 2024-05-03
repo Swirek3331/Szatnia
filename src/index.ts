@@ -27,6 +27,7 @@ app.get("/", (req, res) => {
 
 app.use(express.static(path.join(rootDirectory, "public")))
 app.use(express.static(path.join(rootDirectory, "assets")))
+app.use(express.static(path.join(rootDirectory, "dist/web")))
 
 app.listen(3000, () => {
     console.log("http://127.0.0.1:3000/")
@@ -42,7 +43,7 @@ function createDB(): void
     })
 }
 
-function dumpDB()
+export function dumpDB()
 {
     exec(`mysqldump -u root szatnia > ${rootDirectory}/dump.sql`, (err, stdout, stderr) => {
         if (err)
@@ -56,7 +57,7 @@ function dumpDB()
     })
 }
 
-function importDB()
+export function importDB()
 {
     exec(`mysql -u root szatnia < ${rootDirectory}/dump.sql`, (err, stdout, stderr) => {
         if (err)
