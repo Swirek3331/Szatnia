@@ -96,5 +96,12 @@
             </form>
         </section>
     </main>
+
+    <?php
+
+        require_once("src/connection.php");
+
+        $conn = new mysqli($host, $user, $password, $db);
+    ?>
 </body>
 </html>
