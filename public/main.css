@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+main.flex {
+    justify-content: space-evenly;
+
+    & section {
+        width: 30%;
+        margin-inline: auto;
+    }
+}
+
+div.form-row {
+    
+}
