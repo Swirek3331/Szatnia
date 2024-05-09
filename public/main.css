@@ -4,23 +4,8 @@
     box-sizing: border-box;
 }
 
-body {
-    text-align: center;
-}
-
-.flex {
-    display: flex;
-}
-
-main.flex {
-    justify-content: space-evenly;
-
+aside {
     & section {
-        width: 30%;
-        margin-inline: auto;
+        border-bottom: 1px solid black;
     }
-}
-
-div.form-row {
-    
 }
