@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 09, 2024 at 03:01 PM
+-- Generation Time: Maj 09, 2024 at 03:06 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -32,6 +32,22 @@ CREATE TABLE `box` (
   `room_id` int(1) UNSIGNED NOT NULL,
   `accesability` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `box`
+--
+
+INSERT INTO `box` (`id`, `room_id`, `accesability`) VALUES
+(1, 1, 0),
+(2, 1, 1),
+(3, 1, 1),
+(4, 1, 1),
+(5, 1, 1),
+(6, 2, 1),
+(7, 2, 1),
+(8, 2, 1),
+(9, 2, 0),
+(10, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -97,7 +113,7 @@ ALTER TABLE `room`
 -- AUTO_INCREMENT for table `box`
 --
 ALTER TABLE `box`
-  MODIFY `id` int(2) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(2) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `item`
