@@ -9,6 +9,37 @@
     <link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 <body>
+    <main>
+        <h1>Stan szatni</h1>
+
+        <section>
+            <h2>Widok</h2>
+
+            <form method="get" action="./src/php/room.php">
+                <h3>Stan pomieszczeń</h3>
+        
+                <label for="roomInput">Wybierz pomieszczenie</label><br/>
+                <input type="number" id="roomInput" name="roomInput" min="1" max="2" required/><br/>
+    
+                <input type="submit" value="Wyświelt"/>
+            </form>
+    
+            <form method="get" action="./src/php/box.php">
+                <h3>Stan przedziałów</h3>
+    
+                <label for="boxRoomInput">Wybierz pomieszczenie</label><br/>
+                <input type="number" id="boxRoomInput" name="boxRoomInput" min="1" max="2" required/><br/>
+    
+                <label for="boxInput">Wybierz przedział</label><br/>
+                <input type="number" id="boxInput" name="boxInput" min="1" max="5" required/><br/>
+    
+                <input type="submit" value="Wyświelt"/>
+            </form>
+        </section>
+        <section>
+            <h2>Pliki</h2>
+        </section>
+    </main>
 
 </body>
 </html>
