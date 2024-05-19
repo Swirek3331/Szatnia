@@ -32,7 +32,7 @@
             while ($row = $result->fetch_assoc())
             {
                 echo "<tr>";
-                    echo "<td>" . $row["id"] . "</td>"; //Pytanie jak traktujemy liczenie przedziałów z rooma drugiego
+                    echo "<td>" . ($row["room_id"] == 2 ? $row["id"] - 5 : $row["id"]) . "</td>"; //Pytanie jak traktujemy liczenie przedziałów z rooma drugiego
                     echo "<td>" . ($row["accesability"] ? "Dostępny" : "Niedostępny") . "</td>";
                 echo "</tr>";
             }

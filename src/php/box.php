@@ -18,11 +18,6 @@
         $box = $_POST["boxInput"];
         $boxID = $box;
 
-        if ($room == 2)
-        {
-            $boxID += 5;
-        }
-
         $sql = "";
         $result = $connection->query($sql);
 
