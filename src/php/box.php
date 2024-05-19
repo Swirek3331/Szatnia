@@ -16,19 +16,15 @@
 
         $room = $_POST["boxRoomInput"];
         $box = $_POST["boxInput"];
+        $boxID = $box;
 
-        $query1 = $connection->query("SELECT * FROM room WHERE id=".$room);
-        $query2 = $connection->query("SELECT * FROM box WHERE id=".$box);
-
-        for ($i = 0; $i < $query1->num_rows; $i++) {
-            $row = $query1->fetch_assoc();
-            echo "Pomieszczenie: ".$row["id"]."<br/>";
+        if ($room == 2)
+        {
+            $boxID += 5;
         }
 
-        for ($i = 0; $i < $query2->num_rows; $i++) {
-            $row = $query2->fetch_assoc();
-            echo "Przedział: ".$row["id"]."<br/>";
-        }
+        $sql = "SELECT * FROM item JOIN box ON item.box_id = box.id JOIN room ON box.room_id = room.id WHERE box.id = $boxID AND room.id = $room";
+        $result = $connection->query($sql);
 
     ?>
 
