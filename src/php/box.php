@@ -14,6 +14,12 @@
 
         $connection = @new mysqli($host, $user, $password, $db);
 
+        $room = $_POST["boxRoomInput"];
+        $box = $_POST["boxInput"];
+
+        echo "Pomieszczenie: ".$room."<br/>";
+        echo "Przedział: ".$box."<br/>";
+
     ?>
 
 </body>
