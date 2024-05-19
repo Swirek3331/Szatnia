@@ -23,7 +23,7 @@
             $boxID += 5;
         }
 
-        $sql = "SELECT * FROM item JOIN box ON item.box_id = box.id JOIN room ON box.room_id = room.id WHERE box.id = $boxID AND room.id = $room";
+        $sql = "";
         $result = $connection->query($sql);
 
     ?>
