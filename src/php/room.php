@@ -39,6 +39,8 @@
 
             echo "</table>";
         }
+
+        $connection->close();
     ?>
 
 </body>

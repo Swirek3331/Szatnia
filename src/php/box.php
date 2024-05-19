@@ -26,6 +26,8 @@
         $sql = "";
         $result = $connection->query($sql);
 
+
+        $connection->close();
     ?>
 
 </body>
