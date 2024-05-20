@@ -27,6 +27,7 @@
                 echo "<tr>";
                     echo "<th>Numer</th>";
                     echo "<th>Dostępność</th>";
+                    echo "<th>Pojemność</th>";
                 echo "</tr>";
 
             while ($row = $result->fetch_assoc())
@@ -34,6 +35,7 @@
                 echo "<tr>";
                     echo "<td>" . ($row["room_id"] == 2 ? $row["id"] - 5 : $row["id"]) . "</td>";
                     echo "<td>" . ($row["accesability"] ? "Dostępny" : "Niedostępny") . "</td>";
+                    echo "<td>" . $row["capacity"] . "</td>";
                 echo "</tr>";
             }
 
