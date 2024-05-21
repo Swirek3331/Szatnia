@@ -14,14 +14,6 @@
 
         $connection = @new mysqli($host, $user, $password, $db);
 
-        $room = $_POST["boxRoomInput"];
-        $box = $_POST["boxInput"];
-        $boxID = $box;
-
-        $sql = "";
-        $result = $connection->query($sql);
-
-
         $connection->close();
     ?>
 
