@@ -14,7 +14,7 @@
 
         $connection = @new mysqli($host, $user, $password, $db);
 
-        $room = $_POST["roomInput"];
+        $room = $_POST["room"];
 
         $sql = "SELECT box.* FROM box, room WHERE box.room_id=room.id AND room.id=$room";
         $result = $connection->query($sql);
