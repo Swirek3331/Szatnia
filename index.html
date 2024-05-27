@@ -9,67 +9,6 @@
     <link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 <body>
-    <main>
-        <h1>Stan szatni</h1>
-
-        <section>
-            <h2>Widok</h2>
-
-            <form method="post" action="./src/php/room.php">
-                <h3>Stan pomieszczeń</h3>
-        
-                <label for="room">Wybierz pomieszczenie</label><br/>
-                <input type="number" id="room" name="room" min="1" max="2" required/><br/>
-    
-                <input type="submit" value="Wyświelt"/>
-            </form>
-    
-            <form method="post" action="./src/php/box.php">
-                <h3>Stan przedziałów</h3>
-    
-                <label for="boxRoom">Wybierz pomieszczenie</label><br/>
-                <input type="number" id="boxRoom" name="boxRoom" min="1" max="2" required/><br/>
-    
-                <label for="box">Wybierz przedział</label><br/>
-                <input type="number" id="box" name="boxInput" min="1" max="5" required/><br/>
-    
-                <input type="submit" value="Wyświelt"/>
-            </form>
-        </section>
-        <section>
-            <h2>Pliki</h2>
-        </section>
-        <section>
-            <h2>Zmień stan numerków</h2>
-
-            <form method="post">
-
-                <label for="isState">Numerki istniejące</label>
-                <input type="text" id="isState" name="isState"/>
-
-                <input type="submit" value="Zmień"/>
-
-            </form>
-
-            <form method="post">
-
-                <label for="isNotStae">Numerki brakujące</label>
-                <input type="text" id="isNotStae" name="isNotStae"/>
-
-                <input type="submit" value="Zmień"/>
-
-            </form>
-
-            <form method="post">
-
-                <label for="notExistingState">Braki miejc</label>
-                <input type="text" id="notExistingState" name="notExistingState"/>
-
-                <input type="submit" value="Zmień"/>
-
-            </form>
-        </section>
-    </main>
 
 </body>
 </html> 
