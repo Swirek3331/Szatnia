@@ -1,4 +1,1 @@
-/node_modules
-/dist
-
-# dump.sql
+./assets/dump.sql
